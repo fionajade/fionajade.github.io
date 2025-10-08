@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fiona Jade M. Villanueva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Fiona Jade M. Villanueva</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="site-wrap">
+    <div class="container layout">
+
+      <!-- Main Content -->
+      <main>
+        <section class="article">
+          <h3>Contact</h3>
+          <p class="lead">Want to collaborate? Send a message below.</p>
+
+          <form method="post" action="">
+            <label>Name<br>
+              <input type="text" name="name" required
+                     style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e8e8e8;margin-top:.4rem">
+            </label>
+
+            <label style="display:block;margin-top:.6rem">Email<br>
+              <input type="email" name="email" required
+                     style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e8e8e8;margin-top:.4rem">
+            </label>
+
+            <label style="display:block;margin-top:.6rem">Message<br>
+              <textarea name="message" rows="6" required
+                        style="width:100%;padding:.6rem;border-radius:8px;border:1px solid #e8e8e8;margin-top:.4rem"></textarea>
+            </label>
+
+            <p style="margin-top:1rem"><button type="submit" class="btn">Send Message</button></p>
+
+            <!-- Demo success/error messages (PHP not available in static HTML) -->
+            <!--
+            <p style="color:green;margin-top:.8rem">Thanks, [Name]. Message received (demo).</p>
+            <p style="color:red;margin-top:.8rem">Please provide a valid email.</p>
+            -->
+          </form>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h5>Get in touch</h5>
+          <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        </div>
+
+        <div class="widget">
+          <h5>Follow</h5>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Fiona Jade M. Villanueva. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
