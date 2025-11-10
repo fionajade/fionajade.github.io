@@ -7,90 +7,93 @@
   <title>Fiona Jade</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Oswald:wght@700&family=Inter:wght@300;500&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="assets/img/piyo-logo.png">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
-  <!-- Navbar -->
-  <nav class="navbar-custom">
-    <div class="container nav-container">
-      <div class="logo">
-        <img src="assets/img/white-logo.png" alt="Logo" class="logo-img">
-      </div>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!-- Hero Section -->
-  <section class="hero py-5">
-    <div class="container hero-container text-center">
-      <!-- Hero Title -->
-      <h1 class="display-4 fw-bold mb-3 text-white">lorem ipsum</h1>
-      <!-- Hero Text -->
-      <p class="lead text-white-75">lorem ipsum.</p>
-    </div>
-  </section>
-
-  <!-- Glass Hero Section (exact same size/design, but glass effect) -->
-  <section class="hero py-5">
-    <div class="hero-container glass-hero">
-      <h1 class="hero-title">Piyo</h1>
-      <p class="hero-text">
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-      </p>
-    </div>
-  </section>
-  <!-- Glass Cards Section -->
-  <section class="container my-5">
-    <div class="row g-4 justify-content-center">
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="glass-card p-4 text-center text-white">
-          <h2 class="fw-bold mb-3">Project 1</h2>
-          <p class="text-white-75">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <div class="container-fluid p-0">
+    <nav class="navbar-custom">
+      <div class="container nav-container">
+        <div class="logo">
+          <img src="assets/img/white-logo.png" alt="Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+          <a href="#intro">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="glass-card p-4 text-center text-white">
-          <h2 class="fw-bold mb-3">Project 2</h2>
-          <p class="text-white-75">lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p>
+    </nav>
+
+    <section id="intro" class="py-5 my-10 px-5">
+      <div class="intro">
+        <div class="container intro-container text-center">
+          <h1 class="intro-hello">hello</h1>
+          <h1 class="intro-name">I'm fiona jade</h1>
+        </div>
+        <hr class="project-line mt-5">
+        <div class="intro-bottom">
+          <span class="intro-role">iskolar ng bayan</span>
+        </div>
+    </section>
+
+    <section id="about" class="intro py-3 my-10 px-5 mt-5">
+      <div class="intro-container glass-intro text-center">
+        <h1 class="intro-title">Piyo</h1>
+        <p class="intro-text">
+          lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="intro py-2 my-10 px-5" style="padding-top: 30px;">
+      <hr class="project-line">
+      <div class="container">
+        <div class="welcome-txt mb-2">PROJECTS</div>
+        <div class="my-projects-txt mb-2">bunch of stuff i made</div>
+      </div>
+      <hr class="project-line mt-5">
+      <div class="row g-4 justify-content-center">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="project-card text-center text-white p-0">
+            <a href="https://fionajade.github.io/web-dev/" target="_blank">
+              <img src="assets/img/A04.jpg" class="object-cover" alt="Project 4 Image">
+              <div class="hover-title">Activity 4</div>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="project-card text-center text-white p-0">
+            <a href="https://fionajade.github.io/A05/" target="_blank">
+              <img src="assets/img/A05.jpg" class="object-cover" alt="Project 5 Image">
+              <div class="hover-title">Activity 5</div>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="glass-card p-4 text-center text-white">
-          <h2 class="fw-bold mb-3">Project 3</h2>
-          <p class="text-white-75">lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+    </section>
+
+    <footer class="mt-auto py-3 bg-dark bg-opacity-25 border-top border-light-subtle"
+      style="backdrop-filter: blur(8px);">
+      <div class="container d-flex justify-content-center gap-3">
+        <a href="https://github.com/fionajade" target="_blank" class="text-white fs-4 footer-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:yourname@gmail.com" class="text-white fs-4 footer-icon">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/fiona-jade-villanueva-324975285/" target="_blank"
+          class="text-white fs-4 footer-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
       </div>
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  <!-- Footer Section -->
-  <footer class="mt-auto py-3 bg-dark bg-opacity-25 border-top border-light-subtle" style="backdrop-filter: blur(8px);">
-    <div class="container d-flex justify-content-center gap-3">
-      <a href="https://github.com/yourusername" target="_blank" class="text-white fs-4 footer-icon">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:yourname@gmail.com" class="text-white fs-4 footer-icon">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="text-white fs-4 footer-icon">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-  </footer>
-
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

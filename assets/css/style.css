@@ -1,13 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600&family=Raleway:wght@300;400;500;700&family=Vollkorn:wght@400;600;700&family=Lora:wght@400;500;700&display=swap');
+
+
+:root {
+  --wine: #5b2333;
+  --whitesmoke: #f7f4f3;
+}
+
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
   background: url('../img/bg3.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   overflow-x: hidden;
-  margin: 0;
+}
+
+.container-fluid,
+.row {
+  min-width: 100%;
   padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .navbar-custom {
@@ -65,16 +85,6 @@ body {
   color: #e2b6c2;
 }
 
-.logo img {
-  height: 45px;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -91,45 +101,86 @@ body {
   color: #e2b6c2;
 }
 
-.hero-container,
-.glass-hero {
+.intro-container {
+  margin-top: 3vw;
   max-width: 1600px;
   text-align: center;
   border-radius: 16px;
   padding: 2rem;
-  margin: 8rem auto 4rem auto;
-  transition: all 0.3s ease;
-}
-
-.hero-container {
   min-height: 700px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
+  margin: 0 auto;
+  position: relative;
 }
 
-.hero-container:hover {
-  border-color: rgba(255, 255, 255, 0.9);
+.intro-hello {
+  font-size: 15vw;
+  margin-left: 4vw;
+  margin-top: 7vw;
+  text-align: left;
 }
 
-.glass-hero {
-  min-height: 500px;
-  margin: -5rem auto 2rem auto;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+.intro-name {
+  font-size: 10vw;
+  margin-left: 4vw;
+  margin-top: -3vw;
+  text-align: right;
 }
 
-.glass-hero:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
-  border-color: rgba(255, 255, 255, 0.4);
+.intro-bottom {
+  width: 92%;
+  margin: 10px auto 0;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  color: whitesmoke;
+  margin-bottom: 2vw;
 }
 
-.glass-card {
+.project-line {
+  margin-top: 2vw;
+  height: 2px;
+  background-color: #f7f4f3 !important;
+  border: none;
+  min-width: 100%;
+  opacity: 1;
+  margin: 20px auto;
+}
+
+.container {
+  max-width: 1700px;
+}
+
+.welcome-txt {
+  margin-top: 2vw;
+  color: var(--whitesmoke);
+  font-family: 'Lora', serif;
+  font-size: 10vw;
+  line-height: .9;
+  align-items: justify;
+  text-align: center;
+
+}
+
+.my-projects-txt {
+  color: var(--whitesmoke);
+  font-size: 1.4rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  align-items: center;
+  text-align: center;
+}
+
+.object-cover {
+  width: 550px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
   max-width: 550px;
-  min-height: 350px;
+  max-height: 450px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -139,9 +190,53 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.glass-card:hover {
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 450px;
+  background: linear-gradient(180deg, rgba(92, 3, 25, 0.3), rgba(125, 98, 104, 0.6));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 1.25rem;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+.hover-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: var(--whitesmoke);
+  font-weight: bolder;
+  padding: 10px 0;
+  opacity: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 40px;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+a:hover .hover-title {
+  opacity: 1;
 }
 
 .footer-icon {
@@ -155,10 +250,15 @@ body {
 
 @media (max-width: 768px) {
 
-  .hero-container,
-  .glass-hero {
+  .intro-container,
+  .glass-intro {
     min-height: auto;
     margin: 6rem 1rem 2rem 1rem;
     padding: 1.5rem;
   }
+}
+
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
 }
