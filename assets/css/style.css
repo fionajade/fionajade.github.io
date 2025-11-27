@@ -114,14 +114,12 @@ img {
 
 .intro-hello {
   font-size: 15vw;
-  margin-left: 4vw;
   margin-top: 7vw;
   text-align: left;
 }
 
 .intro-name {
   font-size: 10vw;
-  margin-left: 4vw;
   margin-top: -3vw;
   text-align: right;
 }
@@ -250,8 +248,7 @@ a:hover .hover-title {
 
 @media (max-width: 768px) {
 
-  .intro-container,
-  .glass-intro {
+  .intro-container {
     min-height: auto;
     margin: 6rem 1rem 2rem 1rem;
     padding: 1.5rem;
